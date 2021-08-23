@@ -1,0 +1,430 @@
+// 0. Font load
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+// 1. Color variables
+$pink: #FF1F75;
+$darkblue: #0B3441;
+$black: #161616;
+$white: #fefefe;
+// 2. Grid variables
+$grid1: 8px;
+$grid2: 16px;
+$grid3: 32px;
+$grid4: 64px;
+$grid5: 96px;
+// 3. Font settings
+$reg: 400;
+$bold: 700;
+// 4. CSS Reset
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif ;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+// 5. Working CSS
+// Global
+// Nav global btn
+.btn-double a{
+    background-color: $pink;
+    padding: $grid1 $grid2;
+    color: $white !important;
+    position: relative;
+    transition: all .3s ease;
+}
+.btn-double a::before {
+    content: '';
+    display: block;
+    width:100%;
+    height: 100%;
+    border: 2px solid $pink;
+    position: absolute;
+    top: -$grid1;
+    left: $grid1;
+    transition: all .3s ease;
+}
+// Top pink bar with download app info
+.downloads {
+    background: $pink !important;
+    border: 0;
+    border-radius: 0;
+    color: $white;
+}
+.downloads img {
+    transition: all .3s ease;
+}
+.downloads span:hover {
+    cursor: pointer;
+}
+.downloads span:hover img{
+    transform: scale(1.09);
+}
+.pink-span {
+    color: $pink
+}
+// Music categories
+.categories {
+    width:90%;
+    margin: auto;
+}
+.cat-tiles .img-fluid{
+    border-radius: 36px;
+}
+.cat-img {
+    position: relative;
+}
+.play {
+    position: absolute;
+    right: $grid2;
+    bottom: $grid2;
+    background: $white;
+    border-radius: 100%;
+}
+.play i {
+    color: $pink;
+    font-size: 24px;
+    padding: $grid2;
+    transition: all .3s ease;
+}
+.play:hover > i {
+    cursor: pointer;
+    transform: rotate(15deg);
+    text-shadow: 1px 1px 4px $black;
+}
+.cat-tiles h3 {
+    color: $black;
+    margin-top: $grid3;
+}
+.cat-tiles p {
+    color: rgba(51, 51, 51, 0.493);
+    font-size: 24px;
+}
+.discover a{
+    padding: $grid2 $grid4!important;
+}
+// Footer global
+.footer {
+    background: $pink;
+}
+.social-icons li{
+    margin-bottom: $grid1;
+}
+// Player
+.player-main {
+    z-index: 999;
+    box-shadow: 0px -1px 15px #0b344136;
+    padding: $grid3;
+    background-color: $white;
+}
+.singer-id {
+    color: $darkblue;
+}
+.song-cover {
+    width: 20%;
+    //border-radius: 100%;
+}
+// Heart 'like' button
+.like-song:hover{
+    animation: pulse 500ms infinite alternate ease;
+    cursor: pointer;
+}
+@keyframes pulse {
+    0%{
+        transform: scale(0.7) rotate(5deg);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+progress::-webkit-progress-value {
+     color: $pink !important; 
+}
+// Player controls
+.player-toggler {
+    background: $pink;
+    height: 40px;
+    position: absolute;
+    right: 16px;
+    top: -$grid4;
+    padding: $grid1 $grid2;
+    color: $white;
+}
+.player-toggler:hover {
+    cursor: pointer;
+}
+.player-main .play-btn{
+    font-size: 48px !important;
+}
+.player-main span.material-icons,
+.full span.material-icons {
+    font-size: 36px;
+    color: $pink;
+}
+.song-progress {
+    width:100%;
+    position: relative;
+}
+.player-bar .material-icons:hover {
+    animation: pulse 500ms infinite alternate-reverse
+}
+// "Equalizer"
+.circle,.circle2{
+    background-color: $pink;
+    //border-radius: 100%;
+}
+.circless {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.circle{
+    animation: .5s ease-in circles infinite alternate;
+}
+.circle2 {
+    animation: .6s ease-in circles2 infinite alternate;
+}
+.stable {
+    background-color: $pink;
+    width: 2px;
+    height: 10px;
+    margin: 3px;
+}
+@keyframes circles2{
+    0%{
+        width: 2px;
+        height: 15px;
+        margin-bottom: 10px;
+        transform: translateY(-5px);
+    }
+    100%{
+        width:2px;
+        height:8px;
+    }
+}
+@keyframes circles{
+    0%{
+        width: 2px;
+        height: 10px;
+        margin-top: 0px;      
+        transform: translateY(5px);  
+    }
+    100%{
+        width:2px;
+        height:4px;
+    }
+}
+//  Range color
+input[type='range'] {
+    overflow: hidden;
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #f3baeb;
+    border-radius: 10px;
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 12px;
+    -webkit-appearance: none;
+    color: $pink;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 12px;
+    cursor: pointer;
+    background: #434343;
+    box-shadow: -80px 0 0 80px $pink;
+  }
+// X-Small
+@media screen and (max-width:576px){
+
+}
+// Medium
+@media screen and (max-width:768px){
+    //Jumbotron mobile
+    .jumbotron .display-4 {
+        font-size:3em;
+    }
+    .jumbotron p.h2 {
+        font-size: 2em;
+    }
+    //Player mobile
+    .player-main {
+        max-height: 80px;
+        padding: $grid2;
+        min-height: 100px;
+        background-color: #fefefe;
+        z-index: 999;
+    }
+    .full {
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: $white !important;
+        z-index: 999;
+    }
+    .full .col-6 {
+        width: 100%;
+        flex-flow: column;
+        padding: 0;
+        margin: 0;
+    }
+    .full .song-cover {
+        margin-top: $grid3;
+        width: 80% !important;
+    }
+    .full .singer-id {
+        margin-top: $grid4;
+        text-align: center;
+    }
+    .full .singer-id h3{
+        font-size: $grid3 !important;
+    }
+    .full .singer-id h6{
+        font-size: $grid2 + 8px;
+    }
+    .full span.material-icons {
+        font-size: $grid4;
+    }
+    .player-close-mobile {
+        display: inline-block;
+        font-size: 24px;
+    }
+    .vol-bar,.like-song,.player-toggler {
+        display: none !important;
+    }
+
+    .circless{
+        margin-top: $grid3;
+    }
+    
+    .player {
+        transform: translateY(20%) translateX(30%);
+        width:60%
+    }
+
+    .song-cover {
+        width: 35% !important;
+    }
+    .singer-id h3,.singer-id h6 {
+        font-size: 16px;
+    }
+    .jumbo-img {
+        display: none;
+    }
+    .img-fluid {
+        width: 100%;
+    }
+    .categories {
+        justify-content: center;
+        text-align: center;
+    }
+    .play i {
+        color: $pink;
+        font-size: 24px;
+        padding: $grid2;
+    }
+    .play {
+        right: $grid2;
+    }
+    
+}
+
+// Large
+@media screen and (max-width:992px){
+    // Jumbotron mobile
+    .jumbotron {
+        margin-top: $grid4;
+        margin-bottom: $grid4;
+    }
+    .jumbotron p {
+        margin: $grid3 0 0 0 ;
+    }
+    .jumbotron p:last-child {
+        margin-top: $grid4 !important
+    }
+    .jumbotron .btn-double a{
+        padding: $grid2 $grid4;
+    }
+    // Nav btn mobile
+    nav .btn-double a::before {
+        display: none;
+    }
+    nav .btn-double a{
+        //padding: $grid2 $grid4 !important;
+        background: none;
+        color: rgba(0,0,0,.55) !important
+    }
+    .btn-double:not(nav .btn-double) {
+        margin-top: $grid3;
+    }
+    // Footer mobile
+    .footer .row div:first-child {
+        margin-bottom: $grid3;
+    }
+}
+// Desktop
+@media (min-width:993px) {
+    // Menu hover
+    .btn-double a::before {
+        content: '';
+        display: block;
+        width:100%;
+        height: 100%;
+        border: 2px solid $pink;
+        position: absolute;
+        top: -$grid1;
+        left: $grid1;
+        transition: all .3s ease;
+    }
+    .btn-double a:hover:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .btn-double a:hover {
+        background-color: #fff;
+        color: $pink !important;
+    }
+    .nav-item a{
+        transition: all .2s ease;
+    }
+    .nav-item:not(.nav-item:last-child) a:hover {
+        padding-top: 6px;
+    }
+    // Jumbo/Hero
+    .jumbotron {
+        margin-top: $grid5;
+    }
+    .jumbotron p {
+        margin-top: $grid3;
+    }
+    .jumbotron p:last-child {
+        margin-top: $grid5;
+    }
+    .jumbotron .btn-double a {
+        padding: $grid2 $grid4 !important;
+    }
+    .jumbo-img {
+        position: relative;
+    }
+    
+}

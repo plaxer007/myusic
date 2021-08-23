@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myusic / Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<body>
+
+  <div class="alert alert-danger text-center downloads lead" role="alert">
+    Now available on
+      <span>
+        <img src="imgs/google-play.svg" alt="" srcset="">
+      </span>
+      <span>
+        <img src="imgs/app-store.svg" alt="" srcset="">
+      </span>
+      <span>
+        <img src="imgs/windows.svg" alt="" srcset="">
+      </span>
+  </div>
+  <!-- Player-->
+  <div class="container-fluid position-fixed bottom-0 bg-light player-main">
+    <div class="player-toggler"><i class="fas player-icon fa-arrow-down"></i></div>
+    <div class="player-close-mobile d-none mt-3"><i class="fas fa-arrow-left"></i></div>
+    <div class="container player-box">
+        <div class="row ">
+          <div class="col-md-4 col-6 d-flex singer-bar align-items-center">
+            <img src="imgs/cover/1.png" class="song-cover img-fluid" alt="">
+            <div class="singer-id mx-3">
+              <h3 class="fw-bold artist-name">First</h3>
+              <h6 class="song-title">First Song</h6>
+              <img src="imgs/heart.svg" class="like-song" alt="">
+            </div>
+          </div>
+          <div class="col-md-4 col-6 player-bar">
+            <div class="player d-flex justify-content-center align-items-center">
+              <p><a href="#"><span class="material-icons prev text-center">skip_previous</span></a></p>
+              <p class="mx-3"><a href="#">
+                <span class="material-icons play-btn">play_arrow</span>
+              </a>
+            </p>
+              <p><a href="#"><span class="material-icons next text-center">skip_next</span></a></p>
+            </div>
+            <div class="song-time text-center d-flex">
+              <audio src="songs/1.mp3" class="song"></audio>
+              <div class="d-flex justify-content-center px-2 circless">
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+                <span class="circle-large stable"></span>
+                <span class="circle-small stable"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 vol-bar d-flex align-items-center justify-content-end">
+            <img src="imgs/volume.svg" alt="">
+            <div class="volume-level"><input id="volume" type="range" value="0.5" max="1" min="0" step="0.01"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mt-4">
+        <div class="container my-menu">
+            <a class="navbar-brand" href="#"><img src="imgs/logo-nav.svg" alt="" srcset=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Artist</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Plans</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Top Hits</a>
+              </li>
+              <li class="nav-item btn-double">
+                <a class="nav-link" href="#">Log/Sign in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Jumbotron -->
+      <div class="container jumbotron">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="display-4 fw-bold">Discover<span class="pink-span"> sounds</span></h1>
+            <p class="h2">Start experience music today with <img src="imgs/logo-nav.svg" alt="" srcset=""></p>
+            <p class="h2">Over <span class="pink-span fw-bold">60,000 songs</span> in one place.</p>
+            <p class="btn-double"><a href="#">Join today!</a></p>
+          </div>
+          <div class="col jumbo-img">
+              <img src="imgs/jumbo.svg" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <!-- Kategorie -->
+      <div class="container">
+        <h4>Top categories of <span class="pink-span h2 fw-bold">June</span></h4>
+        <div class="row categories mt-5">
+          <div class="col-6 col-md-3 cat-tiles cat-tile-1">
+            <div class="cat-img">
+              <img src="" alt="" class="img-fluid">
+              <div class="play">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h3>Classic</h3>
+            <p>43 artists</p>
+          </div>
+          <div class="col-6 col-md-3 cat-tiles cat-tile-2">
+            <div class="cat-img">
+              <img src="" alt="" class="img-fluid">
+              <div class="play">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h3>Relax</h3>
+            <p>88 artists</p>
+          </div>
+          <div class="col-6 col-md-3 cat-tiles cat-tile-3">
+            <div class="cat-img">
+              <img src="" alt="" class="img-fluid">
+              <div class="play">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h3>Jazz</h3>
+            <p>62 artists</p>
+          </div>
+          <div class="col-6 col-md-3 cat-tiles cat-tile-4">
+            <div class="cat-img">
+              <img src="" alt="" class="img-fluid">
+              <div class="play">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <h3>Party</h3>
+            <p>95 artists</p>
+          </div>
+        </div>
+        <!-- Pozostałe i ukryte kategorie, d-none klasa domyślna -->
+        <div class="container d-none more-category">
+          <div class="row categories mt-5">
+            <div class="col-6 col-md-3 cat-tiles cat-tile-1">
+              <div class="cat-img">
+                <img src="" alt="" class="img-fluid">
+                <div class="play">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Piano</h3>
+              <p>56 artists</p>
+            </div>
+            <div class="col-6 col-md-3 cat-tiles cat-tile-2">
+              <div class="cat-img">
+                <img src="" alt="" class="img-fluid">
+                <div class="play">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Acoustic</h3>
+              <p>78 artists</p>
+            </div>
+            <div class="col-6 col-md-3 cat-tiles cat-tile-3">
+              <div class="cat-img">
+                <img src="" alt="" class="img-fluid">
+                <div class="play">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Techno</h3>
+              <p>50 artists</p>
+            </div>
+            <div class="col-6 col-md-3 cat-tiles cat-tile-4">
+              <div class="cat-img">
+                <img src="" alt="" class="img-fluid">
+                <div class="play">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Hip Hop</h3>
+              <p>43 artists</p>
+            </div>
+          </div>
+        </div>
+        <!-- Discover more btn -->
+        <p class="btn-double discover text-center mt-5"><a href="#" class="discover-btn">Discover more</a></p>     
+      </div>
+      
+      <!-- Footer -->
+      <div class="container-fluid footer p-5 text-white lh-lg mt-5">
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 d-flex align-items-center justify-content-center">
+            <img src="imgs/logo-footer.svg" alt="" srcset="">
+          </div>
+          <div class="col-lg-3 col-sm-4 col-4">
+            <ul>
+              <li><h3 class="fw-bold">Menu</h3></li>
+              <li>Artists</li>
+              <li>Category</li>
+              <li>Privacy</li>
+              <li>Plans</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-4">
+            <ul>
+              <li><h3 class="fw-bold">Menu</h3></li>
+              <li>Career</li>
+              <li>Blog</li>
+              <li>Cooperate</li>
+              <li>Media</li>
+              <li>Foundation</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-4 social-icons">
+            <ul>
+              <li><h3 class="fw-bold">Visit</h3></li>
+              <li><img src="imgs/ig.svg" alt="" srcset=""></li>
+              <li><img src="imgs/twitter.svg" alt="" srcset=""></li>
+              <li><img src="imgs/yt.svg" alt="" srcset=""></li>
+              <li><img src="imgs/fb.svg" alt="" srcset=""></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="scripts/myusic.js"></script>
+</body>
+</html>
